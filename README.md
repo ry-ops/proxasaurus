@@ -62,7 +62,10 @@ sudo systemctl enable --now proxasaurus
 | alerts | 3 | `list_alerts`, `create_alert`, `delete_alert` |
 | schedules | 4 | `list_scheduled_tasks`, `create_scheduled_task`, `delete_scheduled_task`, `run_scheduled_task` |
 | audit | 3 | `get_audit_log`, `get_cluster_audit`, `get_migration_history` |
-| **Total** | **42** | |
+| k8s_clusters | 5 | `k8s_list_contexts`, `k8s_list_namespaces`, `k8s_create_namespace`, `k8s_delete_namespace`, `k8s_cluster_info` |
+| k8s_nodes | 5 | `k8s_list_nodes`, `k8s_describe_node`, `k8s_cordon_node`, `k8s_uncordon_node`, `k8s_drain_node`, `k8s_node_metrics` |
+| k8s_workloads | 9 | `k8s_list_pods`, `k8s_list_deployments`, `k8s_restart_deployment`, `k8s_scale_deployment`, `k8s_list_services`, `k8s_get_pod_logs`, `k8s_pod_metrics`, `k8s_list_statefulsets`, `k8s_list_jobs`, `k8s_list_ingresses` |
+| **Total** | **62** | |
 
 ## Environment Variables
 

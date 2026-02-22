@@ -31,7 +31,9 @@ mcp = FastMCP(
 def _register_tools() -> None:
     from proxasaurus.tools import clusters, nodes, vms, snapshots, alerts, schedules, audit
     from proxasaurus.tools import backups, storage, provisioning
+    from proxasaurus.tools import k8s_clusters, k8s_nodes, k8s_workloads
 
+    # Proxmox / PegaProx
     clusters.register(mcp)
     nodes.register(mcp)
     vms.register(mcp)
@@ -42,6 +44,11 @@ def _register_tools() -> None:
     backups.register(mcp)
     storage.register(mcp)
     provisioning.register(mcp)
+
+    # Kubernetes
+    k8s_clusters.register(mcp)
+    k8s_nodes.register(mcp)
+    k8s_workloads.register(mcp)
 
 
 def main() -> None:
